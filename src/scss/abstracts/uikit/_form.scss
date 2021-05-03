@@ -1,0 +1,6 @@
+@mixin hook-form-misc {
+    .uk-textarea {
+        min-height: $global-large-gutter;
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,29 @@
+<div data-uk-nb-items>
+{{#> ukContainer size="large"}}
+	{{#*inline "out"}}
+
+	{{#if filter}}
+	<div class="nb-items-filter uk-margin-bottom">{{filter}}</div>
+	{{/if}}
+
+	{{#if message}}
+	<div class="nb-items-message uk-margin-bottom">
+		<div class="uk-alert uk-alert-primary">Showing 12 of 24 found for <strong>q</strong></div>
+	</div>
+	{{/if}}
+
+	{{#> ukGrid class=(default class "uk-child-width-1-2@s uk-child-width-1-3@m uk-grid-match uk-flex-center nb-items-container")}}
+		{{#*inline "cells"}}
+		{{> renderItems}}
+		{{/inline}}
+	{{/ukGrid}}
+
+	{{#if loadMore}}
+	<div class="uk-text-center uk-margin-large-top nb-items-more">
+		{{> ukButton label="Load More" style="primary"}}
+	</div>
+	{{/if}}
+
+	{{/inline}}
+{{/ukContainer}}
+</div>

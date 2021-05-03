@@ -1,0 +1,38 @@
+{{#*inline "nav"}}
+{{#each items}}
+	{{#with this}}
+	<li class="{{#if children}}uk-parent{{/if}}{{#if (eq ../active name)}} uk-active{{/if}}">
+		<a href="{{default url "#"}}">{{title}}</a>
+		{{#if children}}
+		{{> renderNavigation items=children mobile=../mobile active=../active level=1}}
+		{{/if}}
+	</li>
+	{{/with}}
+{{/each}}
+{{/inline}}
+
+{{#if mobile}}{{!-- Mobile / Mobile Sub --}}
+
+<ul>
+	{{#>nav}}{{/nav}}
+</ul>
+
+{{else}}
+
+	{{#if level}}{{!-- Desktop Sub --}}
+
+	<div class="uk-navbar-dropdown">
+		<ul class="uk-nav uk-navbar-dropdown-nav">
+			{{#>nav}}{{/nav}}
+		</ul>
+	</div>
+
+	{{else}}{{!-- Desktop --}}
+
+	<ul class="uk-navbar-nav">
+		{{#>nav}}{{/nav}}
+	</ul>
+
+	{{/if}}
+
+{{/if}}

@@ -1,0 +1,33 @@
+{{#each items}}
+	{{#with this}}
+	<div>
+		<div class="uk-card uk-card-default">
+			<div class="uk-card-media-top">
+				<a href="{{url}}">
+					<img src="{{getImage}}" alt="{{title}}" width="440" height="293" loading="lazy">
+				</a>
+			</div>
+			<div class="uk-card-header">
+				<div class="uk-card-title">
+					<a class="uk-link-reset" href="{{url}}">{{title}}</a>
+				</div>
+				{{#if date_pub}}
+				<div class="uk-text-meta">{{date_pub}}</div>
+				{{/if}}
+				{{#if dates}}
+				<div class="uk-text-meta">{{dates}}</div>
+				{{/if}}
+				{{#if location}}
+				<div class="uk-text-meta">{{location}}</div>
+				{{/if}}
+			</div>
+			<div class="uk-card-body">
+				<p>{{getSummary}}</p>
+			</div>
+			<div class="uk-card-footer">
+				<a class="uk-button uk-button-text" href="{{url}}">Read More</a>
+			</div>
+		</div>
+	</div>
+	{{/with}}
+{{/each}}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang='en-gb'>
+<head>
+	<meta name='robots' content='noindex, nofollow'>
+	<meta charset='utf-8'>
+	<!--[if IE]><meta http-equiv='X-UA-compatible' content='IE=edge'><![endif]-->
+	<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+	<meta name='format-detection' content='telephone=no'>
+	<title><%= title %> - Code | NB Communication</title>
+	<meta name='description' content=''>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css' integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ' crossorigin='anonymous'>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' integrity='sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN' crossorigin='anonymous'>
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i' rel='stylesheet'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/bootstrap.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/animate.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/nb.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/forms.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/template.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/owl/owl.carousel.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/photoswipe/main.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/photoswipe/default-skin/default-skin.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/datetimepicker.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/datetimepicker.base.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/datetimepicker.themes.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/nb-bootstrap-datepicker.css'>
+	<link rel='stylesheet' href='https://nbpw.nbcom.co.uk/site/templates/css/print.css'>
+	<link rel='shortcut icon' href='/favicon.ico'>
+</head>
+<body>
+
+	<header class='header'>
+		<div class='container-fluid'>
+
+			<div class='row'>
+
+				<div class='col-xs-12 col-lg-4'>
+
+					<a class='logo' href='/'>
+						<img src='https://brand.nbcommunication.com/logo/web/nb_logo.png' alt='NB Communication Logo'>
+					</a>
+
+				</div>
+
+			</div>
+
+		</div>
+	</header>
+
+	<div class='page'>
+		<div class='container-fluid'>
+
+			<div class='row'>
+
+				<main class='col-md-12 nb'>
+					<div class='content-wrap'>
+						<div class='content' data-content>
+							<h1><%= title %><br><small>Code v<%= version %></small></h1>
+							<div class='columns'>
+								<ul>
+									<% _.each(files, function(file) { %>
+										<li><a href="<%= file %>"><%= file %></a></li>
+									<% }); %>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</main>
+
+			</div>
+
+		</div>
+	</div>
+
+	<footer class='footer'>
+		<div class='container-fluid'>
+
+			<div class='row'>
+
+				<div class='col-md-12'>
+					<div class='copyright'>Copyright &copy; <%= year %> NB Communication. All rights reserved.</div>
+				</div>
+
+			</div>
+
+		</div>
+	</footer>
+
+	<script src='https://code.jquery.com/jquery-3.1.1.min.js' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' crossorigin='anonymous'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js' integrity='sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8' crossorigin='anonymous'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js' integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn' crossorigin='anonymous'></script>
+	<script src='https://nbpw.nbcom.co.uk/site/templates/js/plugins.js'></script>
+	<script src='https://nbpw.nbcom.co.uk/site/templates/js/datetimepicker.min.js'></script>
+	<script src='https://nbpw.nbcom.co.uk/site/templates/js/nb.js'></script>
+	<script src='https://nbpw.nbcom.co.uk/site/templates/js/nb-bootstrap-datepicker.js'></script>
+	<script src='https://nbpw.nbcom.co.uk/site/templates/js/api.js'></script>
+</body>
+</html>

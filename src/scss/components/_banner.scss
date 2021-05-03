@@ -1,0 +1,43 @@
+.banner {
+	height: calc(75vh - 80px);
+	overflow: hidden;
+
+	&::before {
+		background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 100%);
+		bottom: 0;
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+	}
+
+	.uk-overlay {
+		padding: $global-margin 0;
+		z-index: 2;
+
+		h1 {
+			margin: 0;
+		}
+	}
+
+	@media (min-width: $breakpoint-small) {
+
+		&::before {
+			height: 75%;
+		}
+
+		.uk-overlay {
+			padding-bottom: $global-medium-margin;
+		}
+	}
+
+	@media (min-width: $breakpoint-large) {
+
+
+		.uk-overlay {
+			padding-bottom: $global-large-margin;
+		}
+	}
+}
